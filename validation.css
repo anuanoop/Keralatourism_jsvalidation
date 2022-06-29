@@ -7,7 +7,7 @@
  #passwordInput input[type="password"], #passwordInput input[type="text"]{
     width: 100%;
     padding: 10px;
-    border: 1px solid lightgrey;
+    /* border: 1px solid lightgrey; */
     font-size: 15px;
     
 }

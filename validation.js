@@ -35,6 +35,12 @@ const isValidEmail = email => {
     return re.test(String(email).toLowerCase());
 }
 
+const isValidName = username => {
+    const re = /^[a-zA-Z\s]*$/;
+    return re.test(String(username).toLowerCase());
+}
+
+
 const isValidMobile = mob => {
     const re = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
     return re.test(String(mob).toLowerCase());
@@ -50,7 +56,11 @@ const validateInputs = () => {
 
     if(usernameValue === '') {
         setError(username, 'Username is required');
-    } else {
+    }
+    else if (!isValidName(usernameValue)) {
+    setError(username, 'Provide a valid Username-Only Alphabets allowed');
+    }
+ else {
         setSuccess(username);
         var a='1';
     }
@@ -114,6 +124,8 @@ function validate_emailid()
 }
 
 
+
+
 function validate_mob()
 {
     const mobValue = mob.value.trim();
@@ -133,7 +145,11 @@ function validate_name()
     
     if(usernameValue === '') {
         setError(username, 'Username is required');
-    } else {
+    }
+    else if (!isValidName(usernameValue)) {
+        setError(username, 'Provide a valid Username-Only Alphabets allowed');
+        }
+         else {
         setSuccess(username);
     }
     
