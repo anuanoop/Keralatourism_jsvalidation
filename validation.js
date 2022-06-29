@@ -58,7 +58,7 @@ const validateInputs = () => {
         setError(username, 'Username is required');
     }
     else if (!isValidName(usernameValue)) {
-    setError(username, 'Provide a valid Username-Only Alphabets allowed');
+    setError(username, 'Provide a valid Username-Only Alphabets and spaces are allowed');
     }
  else {
         setSuccess(username);
@@ -147,7 +147,7 @@ function validate_name()
         setError(username, 'Username is required');
     }
     else if (!isValidName(usernameValue)) {
-        setError(username, 'Provide a valid Username-Only Alphabets allowed');
+        setError(username, 'Provide a valid Username-Only Alphabets and spaces are allowed');
         }
          else {
         setSuccess(username);
